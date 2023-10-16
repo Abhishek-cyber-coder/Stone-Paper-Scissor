@@ -1,0 +1,492 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-font-family: "Roboto", sans-serif;
+  --secondary-font-family: "Dangrek", sans-serif;
+  --bg-color: #8cc461;
+  --white-color: white;
+  --blue-color: #0074b6;
+  --pink-color: #bd00ff;
+  --orange-color: #ffa943;
+}
+
+html,
+body {
+  overflow: hidden;
+  background-color: var(--bg-color);
+}
+
+/* Main page that contains everything */
+.main-page {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Css for top head box */
+.heading-box {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  height: 10rem;
+  border: 2px solid var(--white-color);
+  border-radius: 13px;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.heading-items {
+  margin-left: 1rem;
+}
+
+.items {
+  font-family: var(--primary-font-family);
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
+  color: var(--white-color);
+}
+
+.score-boxes {
+  display: flex;
+
+  width: 19rem;
+  margin-right: 1rem;
+
+  justify-content: space-around;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 8.4rem;
+  height: 8rem;
+  background-color: var(--white-color);
+  border-radius: 9px;
+}
+
+.box > p {
+  font-family: var(--primary-font-family);
+  text-align: center;
+}
+.score-head {
+  font-weight: 600;
+  color: #656565;
+  font-size: 1.0625rem;
+  letter-spacing: 2px;
+}
+
+.score {
+  font-weight: 700;
+  font-size: 4.25rem;
+  line-height: 79px;
+}
+
+/* CSS for bottom hand signs */
+.hand-signs {
+  width: 65%;
+  height: 30rem;
+}
+
+.whole-block {
+  height: 27rem;
+
+  width: 26rem;
+
+  margin: 3px auto;
+}
+
+.down-arrow {
+  position: relative;
+
+  left: 5.5rem;
+  top: 4rem;
+  width: 15rem;
+  height: 15rem;
+  border: 1rem solid #000000a3;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.down-arrow::before {
+  position: absolute;
+  content: "";
+  border-top: 1rem solid #000000a3;
+  width: 21rem;
+  transform: rotate(-45deg);
+  left: -3rem;
+  top: 7rem;
+}
+
+.circle {
+  cursor: pointer;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  box-shadow: 3px 0px 21px 1px #00000033 inset;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stone-fist {
+  background-image: url(img/stone.svg);
+  position: relative;
+  top: -7rem;
+  /* left: 0px; */
+  border: 16px solid var(--blue-color);
+}
+
+.scissor-fist {
+  background-image: url(img/scissor.svg);
+  position: relative;
+  left: 18rem;
+  top: -15rem;
+  border: 16px solid var(--pink-color);
+}
+
+.paper-fist {
+  background-image: url(img/paper.svg);
+  position: relative;
+  bottom: 12rem;
+  left: 9.1rem;
+  border: 16px solid var(--orange-color);
+}
+
+/* ******CSS For Winner display Section********* */
+.winner-display-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.fist-box {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.player {
+  text-align: center;
+  font-family: var(--primary-font-family);
+  color: var(--white-color);
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 1.0625rem;
+  z-index: 1;
+}
+
+.second-box {
+  margin-top: 146px;
+}
+
+.game-result {
+  font-family: var(--primary-font-family);
+  font-weight: 800;
+  color: var(--white-color);
+  font-size: 2.4375rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.against {
+  font-family: var(--primary-font-family);
+  font-weight: 800;
+  color: var(--white-color);
+
+  letter-spacing: 2px;
+  font-size: 1.5625rem;
+  text-align: center;
+}
+
+.play-againBTN {
+  font-family: var(--primary-font-family);
+  color: #6b6b6b;
+  border: none;
+  width: 100%;
+  height: 2.75rem;
+  margin-top: 1rem;
+  border-radius: 9px;
+  background-color: var(--white-color);
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+.animate-winner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  animation: pulse 2s ease-out infinite;
+}
+
+.stone {
+  background-image: url(img/stone.svg);
+  border: 16px solid var(--blue-color);
+}
+
+.scissor {
+  background-image: url(img/scissor.svg);
+  border: 16px solid var(--pink-color);
+}
+
+.paper {
+  background-image: url(img/paper.svg);
+  border: 16px solid var(--orange-color);
+}
+
+/******* CSS FoR RULES corner ********/
+.rules {
+  width: 18.9375rem;
+  height: 22.9375rem;
+  position: fixed;
+  right: 3%;
+  bottom: 13%;
+}
+
+.rules-box {
+  position: absolute;
+  bottom: 0;
+  height: 20.3125rem;
+  width: 17.375rem;
+  background-color: #004429;
+  border: 7px solid var(--white-color);
+  border-radius: 13px;
+}
+
+.rules-box h3 {
+  text-align: center;
+  font-family: var(--primary-font-family);
+  color: var(--white-color);
+  font-weight: 500;
+  font-size: 1.8125rem;
+  line-height: 54px;
+}
+.rules-box ul {
+  list-style: none;
+  width: 14rem;
+  margin-left: 24px;
+}
+
+.rules-box li {
+  color: var(--white-color);
+  font-family: var(--primary-font-family);
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 16px;
+  margin-top: 12px;
+  margin-left: 8px;
+}
+
+.rules-box li::before {
+  content: "\25AA";
+  color: #ffd600;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.4375rem;
+  font-size: 1.25rem;
+}
+
+.rules-closeBtn {
+  position: absolute;
+  right: 1%;
+  top: 6%;
+  height: 3.125rem;
+  width: 3.125rem;
+  color: var(--white-color);
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
+  line-height: 45px;
+  border: 5px solid var(--white-color);
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2.375rem;
+  cursor: pointer;
+}
+
+.btn {
+  position: fixed;
+  background: transparent;
+  border: 2px solid var(--white-color);
+  font-family: var(--primary-font-family);
+  font-weight: 600;
+  font-size: 1.3125rem;
+  color: var(--white-color);
+  border-radius: 10px;
+  letter-spacing: 2px;
+  height: 2.5rem;
+  width: 7.4375rem;
+  cursor: pointer;
+}
+
+.btn-rules {
+  right: 3%;
+  bottom: 5%;
+}
+
+.btn-next {
+  right: 3%;
+  bottom: 5%;
+}
+
+/* CSS for Hiding elements from the page */
+.hidden {
+  display: none;
+}
+
+/*** CSS for the Hurray Page ***/
+.hurray-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cup-section {
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  width: 70vw;
+}
+
+.cup {
+  display: inline-block;
+  position: relative;
+  margin-top: 3rem;
+}
+
+.star {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+
+.star1 {
+  width: 20px;
+  height: 20px;
+  top: 3%;
+  left: 45%;
+}
+
+.star2 {
+  width: 60px;
+  height: 60px;
+  top: 60%;
+  left: 80%;
+}
+.star3 {
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 75%;
+}
+
+.star4 {
+  width: 70px;
+  height: 70px;
+  top: 20%;
+  left: 25%;
+}
+
+.star5 {
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: 35%;
+}
+
+.star6 {
+  width: 40px;
+  height: 45px;
+  top: 80%;
+  left: 30%;
+}
+
+.star7 {
+  width: 20px;
+  height: 20px;
+  top: 70%;
+  left: 65%;
+}
+
+.star8 {
+  width: 60px;
+  height: 60px;
+  top: 40%;
+  left: 70%;
+}
+
+.hurray-page p {
+  font-family: var(--primary-font-family);
+  color: #fff;
+  text-align: center;
+  font-size: 5.6875rem;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2px;
+  width: 29rem;
+  height: 5.375rem;
+  flex-shrink: 0;
+  margin-top: 2rem;
+}
+
+.hurray-page h1 {
+  color: #fff;
+  text-align: center;
+  font-family: var(--primary-font-family);
+  font-weight: 600;
+  line-height: normal;
+  width: 29rem;
+  height: 5.375rem;
+  flex-shrink: 0;
+  margin-top: 2rem;
+}
+/* Animation */
+@keyframes pulse {
+  0% {
+    background-color: green;
+    border-radius: 50%;
+    transform: scale(1);
+  }
+  25% {
+    background-color: #008000d6;
+    border-radius: 50%;
+
+    transform: scale(1.2);
+  }
+  50% {
+    background-color: #0080009e;
+    border-radius: 50%;
+    transform: scale(1.4);
+  }
+  75% {
+    background-color: #0080007d;
+    border-radius: 50%;
+    transform: scale(1.6);
+  }
+  100% {
+    background-color: #0080004e;
+    border-radius: 50%;
+    transform: scale(1.8);
+  }
+}

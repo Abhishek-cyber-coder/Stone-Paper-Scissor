@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Paper-Scissor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js" type="module"></script>
+  </head>
+  <body>
+    <div class="main-page">
+      <div class="heading-box">
+        <div class="heading-items">
+          <p class="items">ROCK</p>
+          <p class="items">PAPER</p>
+          <p class="items">SCISSORS</p>
+        </div>
+        <div class="score-boxes">
+          <div class="box">
+            <p class="score-head">
+              COMPUTER<br />
+              SCORE
+            </p>
+            <p class="pc score">0</p>
+          </div>
+          <div class="box">
+            <p class="score-head">
+              YOUR<br />
+              SCORE
+            </p>
+            <p class="user score">0</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hand-signs">
+        <!-- Create this dynamically using JS -->
+
+        <div class="whole-block">
+          <div class="down-arrow"></div>
+          <div class="stone-fist circle" data-fist="stone"></div>
+          <div class="scissor-fist circle" data-fist="scissor"></div>
+          <div class="paper-fist circle" data-fist="paper"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hurray-page">
+      <div class="cup-section">
+        <img src="./img/cup.png" alt="yourray" class="cup" />
+        <img src="./img/Star.png" alt="star" class="star star1" />
+        <img src="./img/Star.png" alt="star" class="star star2" />
+        <img src="./img/Star.png" alt="star" class="star star3" />
+        <img src="./img/Star.png" alt="star" class="star star4" />
+        <img src="./img/Star.png" alt="star" class="star star5" />
+        <img src="./img/Star.png" alt="star" class="star star6" />
+        <img src="./img/Star.png" alt="star" class="star star7" />
+        <img src="./img/Star.png" alt="star" class="star star8" />
+      </div>
+      <p>HURRAY!!</p>
+      <h1>YOU WON THE GAME</h1>
+    </div>
+    <div class="rules hidden">
+      <div class="rules-box">
+        <h3>Game Rules</h3>
+        <ul>
+          <li>
+            Rock beats scissors, scissors beat paper, and paper beats rock.
+          </li>
+          <li>
+            Agree ahead of time whether you’ll count off “rock, paper, scissors,
+            shoot” or just “rock, paper, scissors.”
+          </li>
+          <li>
+            Use rock, paper, scissors to settle minor decisions or simply play
+            to pass the time
+          </li>
+          <li>
+            If both players lay down the same hand, each player lays down
+            another hand
+          </li>
+        </ul>
+      </div>
+      <div class="rules-closeBtn">X</div>
+    </div>
+    <button class="btn btn-rules" type="button">RULES</button>
+  </body>
+</html>
